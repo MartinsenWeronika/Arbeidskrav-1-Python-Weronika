@@ -33,7 +33,45 @@ def calculate_study_time():
     print(f"Samlet tidsbruk: {hours} timer og {minutes} minutter")
 
 
-calculate_study_time()
+# calculate_study_time()
+
+
+def analyze_text():
+    while True:
+        user_input = input("Tast inn en tekst: ")
+
+        if user_input.strip() == "":
+            print("Teksten kan ikke være tom. Prøv igjen.")
+            continue
+
+        break
+
+    characters_with_spaces = len(user_input)
+
+    text_without_spaces = user_input.replace(" ", "")
+    characters_without_spaces = len(text_without_spaces)
+
+    lowercase_text = user_input.lower()
+    reversed_text = user_input[::-1]
+
+    contains_python = "python" in lowercase_text
+
+    print(f"Antall tegn med mellomrom: {characters_with_spaces}")
+    print(f"Antall tegn uten mellomrom: {characters_without_spaces}")
+    print(f"Tekst med små bokstaver: {lowercase_text}")
+    print(f"Tekst baklengs: {reversed_text}")
+
+    if contains_python:
+        print("Teksten inneholder ordet 'python'.")
+    else:
+        print("Teksten inneholder ikke ordet 'python'.")
+
+
+analyze_text()
+
+
+
+
 
 
 
