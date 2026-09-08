@@ -10,7 +10,7 @@ def calculate_study_time():
             break
 
         except ValueError:
-            print("Du må skrive inn et positivt heltall.")
+            print("Ugyldig input. Du må skrive inn et heltall.")
 
     while True:
         try:
@@ -34,3 +34,10 @@ def calculate_study_time():
 
 
 calculate_study_time()
+
+
+
+
+
+
+
