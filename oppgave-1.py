@@ -67,7 +67,45 @@ def analyze_text():
         print("Teksten inneholder ikke ordet 'python'.")
 
 
-analyze_text()
+# analyze_text()
+
+
+
+def analyze_number_range():
+    while True:
+        try:
+            start_value = int(input("Startverdi: "))
+            end_value = int(input("Sluttverdi: "))
+
+            if start_value > end_value:
+                print("Startverdien kan ikke være større enn sluttverdien.")
+                continue
+
+            break
+
+        except ValueError:
+            print("Ugyldig input. Du må skrive inn heltall.")
+
+    even_numbers = []
+    divisible_by_three = []
+    total_sum = 0
+
+    for number in range(start_value, end_value + 1):
+        if number % 2 == 0:
+            even_numbers.append(number)
+
+        if number % 3 == 0:
+            divisible_by_three.append(number)
+
+        total_sum += number
+
+    print(f"Partall i intervallet: {even_numbers}")
+    print(f"Tall som er delelige med 3: {divisible_by_three}")
+    print(f"Summen av alle tallene i intervallet: {total_sum}")
+
+
+analyze_number_range()
+
 
 
 
