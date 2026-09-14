@@ -104,7 +104,37 @@ def analyze_number_range():
     print(f"Summen av alle tallene i intervallet: {total_sum}")
 
 
-analyze_number_range()
+# analyze_number_range()
+
+
+def show_menu():
+    while True:
+        print("\n--- MENY ---")
+        print("1. Beregn tidsbruk")
+        print("2. Analyser tekst")
+        print("3. Analyser tallintervall")
+        print("4. Avslutt")
+
+        choice = input("Velg et alternativ (1-4): ")
+
+        if choice == "1":
+            calculate_study_time()
+
+        elif choice == "2":
+            analyze_text()
+
+        elif choice == "3":
+            analyze_number_range()
+
+        elif choice == "4":
+            print("Programmet avsluttes.")
+            break
+
+        else:
+            print("Ugyldig valg. Velg 1, 2, 3 eller 4.")
+
+
+show_menu()
 
 
 
