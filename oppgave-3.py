@@ -132,6 +132,4 @@ def main():
         print(study_date.strftime(DATE_FORMAT))
 
 
-
-
 main()
